@@ -3,6 +3,26 @@ layout: post
 title: 'Stax'
 subTitle: 'Autonomous Event'
 logo: /img/event/stax/logo.png
+actions:
+  -
+    icon: 'facebook'
+    caption: 'Discussion Forum'
+    link: 'https://www.facebook.com/groups/staxevent/about/'
+  -
+    text: 'T'
+    caption: 'Tutorial'
+    link: '/tutorial/event/stax'
+  -
+    text: 'D'
+    caption: 'Do-It-Yourself'
+    link: '/img/event/stax/stax.png'
+  -
+    icon: 'youtube'
+    caption: "Tutorial Video"
+    link: https://www.youtube.com/watch?v=430rpuLWCMM
+  -
+    text: 'P'
+    caption: 'Total prize money worth Rs 45,000'
 ---
 
 
@@ -34,27 +54,32 @@ To build a robot which can **rearrange** blocks of different colours from a stac
 
 #### Arena
 
-![](/img/event/stax/image_2.png){:.img-responsive}
-                                     
+![](/img/event/stax/image_1.jpg){:.img-responsive}
 
-##### Arena specifications 
 
-* The outer dimensions of the arena will be **505 cm x 360 cm**.
+##### Arena specifications
 
-* Each stack will be a rectangle of inner dimensions **80 cm x 20 cm** with a width of **10 cm** on all sides. 
+* The outer dimensions of the arena will be **200 cm x 200 cm**.
+
+* The main stack and side stacks will be a rectangles of inner dimensions **80 cm x 20 cm** and **40 cm x 20 cm** with a width of **10 cm** on all sides.
+
+* The line width for facilitating line following mechanism will be **5 cm**.
+
+* The distance between line edge and the color indicators providing sequence information wll be **10 cm**.
+
+* Horizontal lines **3 cm** wide provided inside the stacks with gap of **7 cm** will act as a marker to stop if required and pick/place the block.
 
 * Dimensions of the arena are to be considered with a maximum tolerance of **10%**.
 
-![](/img/event/stax/image_3.png){:.img-responsive}
+![](/img/event/stax/image_4.jpg){:.img-responsive}
 
-![](/img/event/stax/image_4.png){:.img-responsive}
+![](/img/event/stax/image_3.jpg){:.img-responsive}
 
-![](/img/event/stax/image_5.png){:.img-responsive}
+![](/img/event/stax/image_8.jpg){:.img-responsive}
 
-![](/img/event/stax/image_6.png){:.img-responsive}
+![](/img/event/stax/image_7.jpg){:.img-responsive}
 
-![](/img/event/stax/image_7.png){:.img-responsive}
-
+![](/img/event/stax/image_5.jpg){:.img-responsive}
 ##### Block Specifications
 
 **Cubical:**  6cm X 6cm X 6cm.
@@ -63,15 +88,13 @@ To build a robot which can **rearrange** blocks of different colours from a stac
 
 **Handle:** A handle will be made on top of each block to facilitate lifting as shown in the figure. A free space of **1.5 cm x 6 cm** will be provided inside each handle.
 
-![](/img/event/stax/image_8.png){:.img-responsive} 
+![](/img/event/stax/image_8.png){:.img-responsive}
 
 ![](/img/event/stax/image_9.png){:.img-responsive}
 
 ![](/img/event/stax/image_10.png){:.img-responsive}
 
 ![](/img/event/stax/image_11.png){:.img-responsive}
-
- 
 
 ##### Robot Specification
 
@@ -84,6 +107,8 @@ To build a robot which can **rearrange** blocks of different colours from a stac
 * The robot should traverse the arena only by using the **line following mechanism**.
 
 * The robot should detect the desired sequence of the blocks as well as the order of the blocks arranged initially, by using colour detection.
+
+* The robot need not show the detected/desired sequence but it should show **exclusive identification** for block of each color detected. Eg. using different LEDs for different blocks.
 
 * Points will be awarded for correct **identification** and **deposition** of the blocks at the end of the run. **Correct identification:** Whether the colour of block detected is correct. **Deposited Objects:** Blocks deposited must be in the correct sequence.
 
@@ -107,7 +132,7 @@ To build a robot which can **rearrange** blocks of different colours from a stac
 
 ##### Task
 
-* There will be a total of **4 blocks** in **random** order.
+* There will be a total of **3 blocks** in **random** order.
 
 * The participant will be **allowed to input the initial order of blocks** in their robot, before the run starts.
 
@@ -141,7 +166,7 @@ To build a robot which can **rearrange** blocks of different colours from a stac
 
     * Successful identification of colour: **150** (P)
 
-    * Completion of Job: **150** (R)
+    * Completion of Job and coming back to centre node: **150** (R)
 
     * Time factor: **2**(T in seconds)
 
@@ -201,13 +226,13 @@ To build a robot which can **rearrange** blocks of different colours from a stac
 
     * Successful identification of colour: **150** (P)
 
-    * Completion of Job: **150** (R)
+    * Completion of Job and coming back to centre node: **150** (R)
 
     * Time factor: **2**(T in seconds)
 
 * **Negatives**
 
-    * correct identification of colour: **-50** (A)
+    * Incorrect identification of colour: **-50** (A)
 
     * Dropping the block each time: **-30** (L)
 
@@ -220,29 +245,27 @@ To build a robot which can **rearrange** blocks of different colours from a stac
 **Formula:**
 
 {% highlight ruby %}
-1000 + 100*(Q) + 150*(P + R) + 2*T - 30*L - 50 *(A + D) - 100*O - 150*S
+1000 + 100*(Q) + 150*(P + R) + 2*T - 30*L - 50 *A - 100*O - 150*(S + D)
 {% endhighlight %}
 ##### General Rules
 
 * Maximum number of participants allowed per team: **4 people**.
 
-* The participants will be provided with **220 Volts, 50 Hz **standard AC supply.
+* The participants will be provided with **220 Volts, 50 Hz** standard AC supply.
+
+* Only **32 bit** processors or below will be allowed.
 
 * Participants will have to arrange for any other power supply required for their robot.
 
 * Teams cannot tinker with their robots during the run.
 
-* [LEGO kits](http://en.wikipedia.org/wiki/Lego_Mindstorms) or its spare parts are not allowed. 
+* [LEGO kits](http://en.wikipedia.org/wiki/Lego_Mindstorms) or its spare parts are not allowed.
 
 * The decision of the Team Robotix will be **final** and **binding**.
 
 * The rules are subject to change.
 
-**Note:**
-
-* The data input to the robot in the first round will be allowed by means of either wireless communication or changing the parameters in the code of burnt on the microcontroller.
-
-It is suggested that the participant try to make a wireless robot. In which case the wireless robot should be powered by battery on-board.
+It is suggested to the participants to try making a wireless robot, powered by a battery on-board.
 
 **Links to Tutorials:**
 
@@ -267,4 +290,3 @@ Ph. no: **+91 9455538734**
 Email: **[aman.chandra@robotix.in](mailto:aman.chandra@robotix.in)**
 
 Ph. no: **+91 8967126457**
-

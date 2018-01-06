@@ -10,10 +10,17 @@ highlighter: rouge
 permalink: pretty
 exclude: [vendor, scripts, README.md, LICENSE.txt, CNAME]
 
+# SASS Settings
+sass:
+  sass_dir: _sass
+  line_comments: false
+  relative_assets: true
+  style: compressed
+
 # Site Settings
 title: "Technology Robotix Society, IIT Kharagpur"
 description: "Technology Robotix Society is an official society under the Technology Students' Gymkhana IIT Kharagpur."
-baseurl: "https://www.robotix.in"
+baseurl: "https://2018.robotix.in"
 permalink: "/blog/:title/"
 collections:
   events:
@@ -46,7 +53,7 @@ navigationLinks:
  - {permalink: "/team/", text: "Team"}
  - {permalink: "/about-us/", text: "About Us"}
 bottomNavigationLinks:
- - {link: "http://contact.robotix.in", text: "Contact Us"}
+ - {link: "https://contact.robotix.in", text: "Contact Us"}
 
 
 # Hero Block
@@ -106,7 +113,7 @@ socialLinks:
  - {link: "https://plus.google.com/102868621563384739622/", icon: "google-plus"}
  - {link: "https://twitter.com/RobotixIITKgp", icon: "twitter"}
  - {link: "https://facebook.com/robotixiitkgp", icon: "facebook"}
- - {link: "http://www.youtube.com/robotixiitkgp", icon: "youtube"}
+ - {link: "https://www.youtube.com/robotixiitkgp", icon: "youtube"}
  - {permalink: "/feed.xml", icon: "rss"}
 footerBlocks:
  -
@@ -118,12 +125,12 @@ footerBlocks:
  -
   title: "Contacts"
   links:
-   - {link: "http://contact.robotix.in", text: "Contact Us"}
+   - {link: "https://contact.robotix.in", text: "Contact Us"}
  -
-  title: "Archive"
+  title: "Archives"
   links:
-   - {link: "http://2016.robotix.in/", text: "Robotix 2016"}
-   - {link: "http://2017.robotix.in/", text: "Robotix 2017"}
+   - {link: "https://2017.robotix.in/", text: "Robotix 2017"}
+   - {link: "https://2016.robotix.in/", text: "Robotix 2016"}
 
 # Blog
 blogCommentsEnabled: true
